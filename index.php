@@ -1,11 +1,21 @@
+<meta http-equiv="Refresh" content="60" />
+<a>12343545534652562</a>
 <?php
+//header('refresh: 60');
 
-require_once 'inc/db.php';
+include 'tr_per_hour.php';
 
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+?>
+
+<table>
+    <tr>
+        <td><img src="pic/tr_per_hour.png"></td>
+    </tr>
+</table>
+
+
+
+
+
 
