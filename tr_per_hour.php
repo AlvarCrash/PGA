@@ -6,6 +6,7 @@ include("Pchart/class/pPie.class.php");
 include("Pchart/class/pImage.class.php");
 include 'inc/data_tr_per_hour.php';
 //echo $count;
+
 for ($iii=1; $iii<=60; $iii++){
     $minut[$iii] = $iii;
 }
@@ -17,7 +18,8 @@ for ($iii=1; $iii<=60; $iii++){
  $MyData->addPoints($massivcancel,"Отказ");
  //$MyData->addPoints(array(2,7,5,18,19,22),"Probe 3");
  //$MyData->setSerieTicks("Успешные",8);
- $MyData->setSerieWeight("Успешные",1);
+ $MyData->setSerieWeight("Успешные",0);
+ $MyData->setSerieWeight("Отказ",1);
  $MyData->setAxisName(0,"Транзакции");
  $MyData->addPoints($minut,"Labels");
  $MyData->setSerieDescription("Labels","Months");
@@ -38,7 +40,7 @@ for ($iii=1; $iii<=60; $iii++){
  $myPicture->drawText(250,35,"Мониторинг транзакций за последний час",array("FontSize"=>16,"Align"=>TEXT_ALIGN_BOTTOMMIDDLE));
 
  /* Set the default font */
- $myPicture->setFontProperties(array("FontName"=>"Pchart/fonts/verdana.ttf","FontSize"=>6));
+ $myPicture->setFontProperties(array("FontName"=>"Pchart/fonts/verdana.ttf","FontSize"=>10));
 
  /* Define the chart area */
  $myPicture->setGraphArea(60,40,850,400);
