@@ -27,7 +27,7 @@ while ($row1 = mysqli_fetch_assoc($result1)){
     
 }
 
-if (count($arraypaidtimem) < 2){
+if (count($arraypaidtimem) <= 1 ){
     $to = "121@aorb.ru";
     $subject = "!!!PaymentGate!!! Внимание, низкая активность!";
     $message = "Внимание! На Платежном Шлюзе зарегистрирована низкая активность! Возможны технические проблемы!";
